@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Registration</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .modal-footer .btn-danger[name="btnDanger"]{
+display: none;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <header>
+        <img src="../image/HotelHeader.jpg" height="150px" class="w-100 d-block">
+    </header>
+    <section>
+        <div class="accordion" id="hotelbook">
+
+            <!-- Customer Details -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button data-bs-target="#customer" data-bs-toggle="collapse" class="btn btn-danger  w-100">
+                        Customer Info
+                    </button>
+                </div>
+                <div class="accordion-collapse show collapse" id="customer" data-bs-parent="#hotelbook">
+                    <div class="accordion-body">
+                        <dl>
+                            <dt>Customer Name</dt>
+                            <dd><input type="text" id="txtName" class="form-control"></dd>
+                            <dt>Email Name</dt>
+                            <dd><input type="email" id="txtEmail" class="form-control"></dd>
+                            <dt>Contact No</dt>
+                            <dd><input type="number" id="txtNumber" class="form-control"></dd>
+                            <dt>Check in Date</dt>
+                            <dd><input type="date" id="txtDate" class="form-control"></dd> 
+                            <dt>Total No of Persons</dt>
+                            <dd><input type="number" id="totNumber" class="form-control"></dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Select Room  -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button data-bs-target="#room" data-bs-toggle="collapse" class="btn btn-danger w-100">Select Room
+                        Type</button>
+
+                </div>
+                <div class="accordion-collapse collapse" id="room" data-bs-parent="#hotelbook">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../image/Deluxe Room_new.jpg" class="card-img-top">
+
+                                    <div class="card-header">
+                                        <h3>Deluxe Room</h3>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h2><input type="radio" id="optDeluxe" value="Deluxe Room" name="room"
+                                                class="form-check-input">&#8377; 2500/-</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../image/SuiteRoom.jpg" class="card-img-top">
+
+                                    <div class="card-header">
+                                        <h3>Suite Room</h3>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <h2><input type="radio" name="room" id="optSuite"
+                                                class="form-check-input">&#8377; 4000/-</h2>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Select Other  -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button data-bs-target="#rooms" data-bs-toggle="collapse" class="btn btn-danger w-100">Select
+                        Amenities</button>
+
+                </div>
+                <div class="accordion-collapse collapse" id="rooms" data-bs-parent="#hotelbook">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../image/Ac.jpg" class="card-img-top">
+
+                                    <div class="card-header">
+                                        <h3>Ac</h3>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h2><input type="checkbox" id="optDeluxe" value="Deluxe Room" name="room"
+                                                class="form-check-input">&#8377; 1000/-</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../image/Locker.jpg" class="card-img-top">
+
+                                    <div class="card-header">
+                                        <h3>Locker</h3>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <h2><input type="checkbox" name="room" id="optSuite"
+                                                class="form-check-input">&#8377; 300/-</h2>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Ammount -->
+
+<div class="accordion-item">
+    <div class="accordion-header">
+        <button data-bs-target="#Amount" data-bs-toggle="collapse" class="btn btn-danger w-100">Advance Ammount</button>
+
+    </div>
+    <div class="accordion-collapse collapse" id="Amount" data-bs-parent="#hotelbook">
+        <div class="accordion-body">
+            <dl>
+                <dt>Advance Amount</dt>
+                <dd><input type="text" id="txtAdvance" required class="form-control" placeholder="Please Pay in Advance "></dd>
+            </dl>
+
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+        <div id="detailsContainer" class="w-50" style="display: none;">
+            <h2 style="color: red; align-items: center;"> Details</h2>
+            <dl class="row">
+                <dt class="col-3">Name :</dt>
+                <dd class="col-9" id="lblName"></dd>
+                <dt class="col-3">Email :</dt>
+                <dd class="col-9" id="lblEmail"></dd>
+                <dt class="col-3">Mobile :</dt>
+                <dd class="col-9" id="lblNumber"></dd>
+                <dt class="col-3">Date :</dt>
+                <dd class="col-9" id="lblDate"></dd>
+                <dt class="col-3">Total Person :</dt>
+                <dd class="col-9" id="totPerson"></dd>
+
+                <!-- <dt class="col-3"> room :</dt>
+                <dd class="col-9" id="sltroom"></dd>
+                <dt class="col-3">loker :</dt>
+                <dd class="col-9" id="totloker"></dd> -->
+            </dl>
+            <button onclick="EditClick()" data-bs-target="#customer" data-bs-toggle="collapse"
+                class=" btn btn-primary w-25 mb-3">Edit</button> 
+        </div>
+    </section>
+    <div class="modal-footer">
+        <button class="btn btn-danger w-100" data-bs-target="#register" data-bs-target="collapse"
+            onclick="RegisterClick()" id="btnRegister" name="btnSubmit">Register</button>
+
+        <button data-bs-dismiss="collapse" class="btn btn-danger w-100 mt-3"data-bs-target="collapse" id="ClickDanger" name="btnDanger">Cancel</button>
+    </div>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script type="text/javascript">
+function RegisterClick(){
+            // document.getElementById("btnRegister").innerHTML = "Submit";
+            document.getElementById("detailsContainer").style.display = "block";
+            document.getElementById("lblName").innerHTML = document.getElementById("txtName").value;
+            document.getElementById("lblEmail").innerHTML = document.getElementById("txtEmail").value;
+            document.getElementById("lblNumber").innerHTML = document.getElementById("txtNumber").value;
+            document.getElementById("lblDate").innerHTML = document.getElementById("txtDate").value;
+            document.getElementById("totPerson").innerHTML = document.getElementById("totNumber").value;
+            // document.getElementById("sltroom").innerHTML = document.getElementById("room").value;
+            // document.getElementById("totloker").innerHTML = document.getElementById("rooms").value;
+
+        }
+        function EditClick() {
+            document.getElementById("btnRegister").innerHTML = "Update";
+            document.getElementById("ClickDanger").style.display = "block";
+            document.getElementById("lblName").innerHTML = document.getElementById("txtName").value;
+            document.getElementById("lblEmail").innerHTML = document.getElementById("txtEmail").value;
+            document.getElementById("lblNumber").innerHTML = document.getElementById("txtNumber").value;
+            document.getElementById("lblDate").innerHTML = document.getElementById("txtDate").value;
+            document.getElementById("totPerson").innerHTML = document.getElementById("totNumber").value;
+            // document.getElementById("sltroom").innerHTML = document.getElementById("room").value;
+            // document.getElementById("totloker").innerHTML = document.getElementById("rooms").value;    
+                }
+</script>
+
+</body>
+
+</html>

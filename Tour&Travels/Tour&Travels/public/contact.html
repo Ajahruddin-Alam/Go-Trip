@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/jquery/dist/jquery.js">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/js/bootstrap.bundle.js">
+  <style>
+    h4 {
+      display: flex;
+      font-size: 25px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h4:before,
+    h4:after {
+      content: "";
+      flex: 1 1;
+      border-bottom: 1px solid white;
+      margin: auto;
+    }
+
+    .head {
+      border: 1px solid white;
+      border-radius: 50px;
+    }
+
+    .btn {
+      color: rgb(34, 206, 57);
+      margin-left: 135px;
+      border: 1px solid black;
+      border-radius: 10px;
+      width: 90px;
+    }
+
+    .btn:hover {
+      color: rgb(14, 114, 28);
+
+    }
+
+    body {
+      background-color: rgb(14, 114, 28);
+    }
+
+    hr {
+      color: white;
+    }
+
+    .bi {
+      margin-left: 500px;
+      color: white;
+    }
+
+    .right,
+    form,
+    tr {
+      color: white;
+    }
+
+    input {
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      background-color: rgb(14, 114, 28);
+    }
+
+    .no-outline:focus {
+      outline: none;
+    }
+
+    textarea {
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom-style: none;
+      background-color: rgb(14, 114, 28);
+    }
+   
+  </style>
+  <script>
+    function sendBtn(){
+      alert("Response Submitted Thanks You");
+    }
+  </script>
+</head>
+
+<body class="container-fluid">
+  <fieldset>
+    <h4><button class="head bg-white">contact</button></h4>
+    <!--Left Side-->
+    <div class="row">
+      <div class="left col-6">
+        <div class="point">
+          <span>.</span> <hr>
+        </div>
+        <p class="bi bi-geo-alt-fill"></p>
+        <hr>
+        <p class="bi bi-telephone-fill"></p>
+        <hr>
+        <p class="bi bi-whatsapp"></p>
+        <hr>
+      </div>
+
+      <!--Right side-->
+      <div class="right col-6">
+        <form class="border p-4 w-50 ms-5 rounded-2">
+          <tr>Name :</tr>
+          <td><input type="text" name="" id="" class="no-outline"></td>
+          <tr>Phone Number :</tr>
+          <td><input type="mobile" name="" id="" class="no-outline"></td>
+          <tr>Email :</tr>
+          <td><input type="email" name="" id="" class="no-outline"></td>
+          <tr>Your Text :</tr>
+          <td><textarea name="textarea" id="" cols="20" rows="5" class="no-outline"></textarea></td>
+          <button onclick="sendBtn()" class="btn bg-white mt-4">Send</button>
+        </form>
+      </div>
+    </div>
+  </fieldset>
+
+</body>
+
+</html>
