@@ -178,6 +178,15 @@ nav {
 .footer .follow {
     margin-top: -90px;
 }
+.footer .ms-5 .bi {
+    color: green;
+}
+
+.footer .ms-5 .bi:hover {
+    font-size: 25px;
+    color: red;
+    text-decoration: underline;
+}
 
 #detailsContainer {
     border: 1px solid gray;
