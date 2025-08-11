@@ -131,17 +131,90 @@ nav {
     font-family: sans-serif;
     font-weight: 15px;
 }
-
-.footer {
-    display: flex;
-    flex: 4fr 4fr 4fr;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    box-shadow: 3px 3px 10px lightpink;
-    border-radius: 10px;
+footer {
+    background: #222;
+    color: #fff;
+    padding: 30px 20px;
 }
 
+/* 3 column layout */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* mobile responsive */
+    gap: 30px;
+}
+
+.footer h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #fff;
+}
+
+/* Social icons style */
+.follow a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 50%;
+    background: #333;
+    transition: all 0.3s ease;
+}
+
+.follow a .bi {
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+/* Hover brand colors */
+.follow a:nth-of-type(1):hover { background: rgba(37,211,102,0.1); box-shadow: 0 0 8px #25D366; }
+.follow a:nth-of-type(1):hover .bi { color: #25D366; }
+
+.follow a:nth-of-type(2):hover { background: rgba(24,119,242,0.1); box-shadow: 0 0 8px #1877F2; }
+.follow a:nth-of-type(2):hover .bi { color: #1877F2; }
+
+.follow a:nth-of-type(3):hover { background: rgba(29,161,242,0.1); box-shadow: 0 0 8px #1DA1F2; }
+.follow a:nth-of-type(3):hover .bi { color: #1DA1F2; }
+
+.follow a:nth-of-type(4):hover { background: rgba(228,64,95,0.1); box-shadow: 0 0 8px #E4405F; }
+.follow a:nth-of-type(4):hover .bi { color: #E4405F; }
+
+.follow a:nth-of-type(5):hover { background: rgba(255,0,0,0.1); box-shadow: 0 0 8px #FF0000; }
+.follow a:nth-of-type(5):hover .bi { color: #FF0000; }
+
+/* Bottom reverse section */
+.reverse {
+    background: #111;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
 .links ul li a::before {
     list-style: none;
     text-decoration: none;
@@ -173,7 +246,7 @@ nav {
     position: relative;
     margin: 10px 0 0 5px;
     background-color: rgba(75, 103, 196, 0.788);
-    color: white;
+    color: #fff;
     border-radius: 10px;
 }
 
@@ -212,19 +285,71 @@ header section .mobile-nav-toggle {
 display: none;
 }
 
-.footer .follow a .bi{
+/* .footer .follow a .bi{
 display: inline-block;
 margin-left: 10px;
 
+} */
+.follow a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    font-size: 22px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
-.footer .ms-5 .bi {
-    color: green;
+.follow a .bi {
+    color: #555 !important; 
+    transition: color 0.3s ease;
+}
+/* WhatsApp */
+.follow a:nth-of-type(1):hover {
+    background: rgba(37, 211, 102, 0.1);
+    box-shadow: 0 0 10px rgba(37, 211, 102, 0.7);
+}
+.follow a:nth-of-type(1):hover .bi {
+    color: #25D366 !important;
 }
 
-.footer .ms-5 .bi:hover {
-    font-size: 25px;
-    color: red;
-    text-decoration: underline;
+/* Facebook */
+.follow a:nth-of-type(2):hover {
+    background: rgba(24, 119, 242, 0.1);
+    box-shadow: 0 0 10px rgba(24, 119, 242, 0.7);
+}
+.follow a:nth-of-type(2):hover .bi {
+    color: #1877F2 !important;
+}
+
+/* Twitter */
+.follow a:nth-of-type(3):hover {
+    background: rgba(29, 161, 242, 0.1);
+    box-shadow: 0 0 10px rgba(29, 161, 242, 0.7);
+}
+.follow a:nth-of-type(3):hover .bi {
+    color: #1DA1F2 !important;
+}
+
+/* Instagram */
+.follow a:nth-of-type(4):hover {
+    background: rgba(228, 64, 95, 0.1);
+    box-shadow: 0 0 10px rgba(228, 64, 95, 0.7);
+}
+.follow a:nth-of-type(4):hover .bi {
+    color: #E4405F !important;
+}
+
+/* YouTube */
+.follow a:nth-of-type(5):hover {
+    background: rgba(255, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+.follow a:nth-of-type(5):hover .bi {
+    color: #FF0000 !important;
 }
 
 @media screen and (max-width:720px) {
